@@ -93,5 +93,6 @@ class Student
     students = DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
     end
+    students[0..x]
   end
 end
